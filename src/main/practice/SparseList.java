@@ -16,65 +16,32 @@ public class SparseList<T> implements List<T> {
   private int size;         // the logical length of the list
 
   public SparseList(T defaultValue) {
-    this.defaultValue = defaultValue;
-    this.head = new Node<>(-1, null);   // sentinel: not a real position
-    this.size = 0;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public int size() {
-    return size;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public void add(T value) {
-    int index = size;
-    size++;
-
-    if (Objects.equals(value, defaultValue)) {
-      return;     // a default value stores nothing: no node, no work
-    }
-
-    Node<T> prev = head;
-    while (prev.next != null) {
-      prev = prev.next;          // walk to the end of the chain
-    }
-    prev.next = new Node<>(index, value);
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public T get(int index) {
-    if (index < 0 || index >= size) {
-      throw new IndexOutOfBoundsException();
-    }
-    Node<T> current = findNodeBeforeTarget(index).next;
-    if (current != null && current.index == index) {
-      return current.value;              // a value is stored here
-    }
-    return defaultValue;                 // nothing stored here, so it is the default
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public void set(int index, T value) {
-    if (index < 0 || index >= size) {
-      throw new IndexOutOfBoundsException();
-    }
-
-    Node<T> prev = findNodeBeforeTarget(index);
-    Node<T> current = prev.next;
-    boolean hasNode = (current != null && current.index == index);
-
-    if (Objects.equals(value, defaultValue)) {
-      if (hasNode) {
-        prev.next = current.next;       // remove the node: position returns to default
-      }
-    } else if (hasNode) {
-      current.value = value;            // a node is already here: just update it
-    } else {
-      Node<T> node = new Node<>(index, value);
-      node.next = current;              // insert the new node between prev and current
-      prev.next = node;
-    }
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
