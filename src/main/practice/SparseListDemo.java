@@ -5,7 +5,12 @@ package practice;
  * the List ADT. It builds a mostly-zero list, reads stored and default
  * positions, writes values that add and remove nodes, and searches it.
  */
-public class PracticeMain {
+public final class SparseListDemo {
+
+  private SparseListDemo() {
+    // This class should not be instantiated!
+  }
+
   public static void main(String[] args) {
     // A mostly-zero list of length 8 with two non-default values.
     SparseList<Integer> list = new SparseList<>(0);
