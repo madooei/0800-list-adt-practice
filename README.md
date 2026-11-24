@@ -30,7 +30,7 @@ code/
 
 There is no build tool and no test suite: testing is introduced later in the course. The script above is all you need.
 
-## What's here
+## Contents
 
 - `practice.SparseList<T>` — implements `List<T>` by storing only the positions whose value differs from a default, as a chain of `(index, value)` nodes led by a front sentinel and kept sorted by index. `get` and `set` walk the chain to the position; `add` appends at the next index and stores nothing when the value is the default, which is where the space savings come from. Same contract as `ArrayList` and `LinkedList`; very different representation and cost.
 - `demo.SparseListDemo` — the demo of `SparseList`; it builds a mostly-default `SparseList`, then exercises `add`, `get`, and `set`.
